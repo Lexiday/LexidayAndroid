@@ -3,22 +3,85 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/paper_background"
     tools:context="com.android.lexiday.MainActivity"
     tools:ignore="MergeRootFrame" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/m10"
+        android:layout_marginRight="@dimen/m10"
+        android:layout_marginTop="@dimen/m10"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/m20"
+            android:src="@drawable/lexiday50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/part_of_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lexiday  "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/definition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(lek-si-dey) n.  "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/m10" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.  "
+                android:textAppearance="?android:attr/textAppearanceMedium" 
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a set it and forget it learning tool."
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/m10"
+        android:layout_marginRight="@dimen/m10"
+        android:layout_marginTop="@dimen/m20"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/user_email"
@@ -32,12 +95,13 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/pronunciation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/password"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/user_password"
@@ -51,23 +115,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom" >
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/m10"
+        android:layout_marginLeft="@dimen/m10"
+        android:layout_marginRight="@dimen/m10" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/signIn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/m10"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="@string/signin" />
+            android:text="@string/signin"
+            android:background="#b62f2f"
+            android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/signUp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/signup" />
+            android:onClick="onClick"
+            android:text="@string/signup" 
+            android:background="#040404"
+            android:textColor="#ffffff"/>
     </LinearLayout>
 
 </FrameLayout>
